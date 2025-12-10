@@ -511,11 +511,16 @@ img {
     /* Mobile Menu */
     .hamburger {
         display: block;
-        z-index: 1001;
+        z-index: 2000; /* Z-index molto alto per stare sopra al menu */
+        position: fixed; /* Fisso rispetto alla finestra */
+        top: 25px; /* Allineato verticalmente */
+        right: 20px; /* Allineato a destra */
+        cursor: pointer;
     }
 
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
+        background-color: var(--accent-color); /* Colore accento quando attivo */
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -524,6 +529,7 @@ img {
 
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--accent-color); /* Colore accento quando attivo */
     }
 
     .nav-links {
@@ -531,11 +537,12 @@ img {
         left: -100%;
         top: 0;
         flex-direction: column;
-        background-color: var(--bg-color);
+        background-color: rgba(15, 23, 42, 0.98); /* Leggera trasparenza */
+        backdrop-filter: blur(10px);
         width: 100%;
         height: 100vh;
         justify-content: center;
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
         z-index: 999;
     }
 
@@ -544,10 +551,24 @@ img {
     }
 
     .nav-links li {
-        margin: 15px 0;
+        margin: 20px 0;
     }
     
     .nav-links a {
-        font-size: 1.5rem;
+        font-size: 1.8rem; /* Testo più grande per touch */
+    }
+
+    /* Ottimizzazioni Mobile Extra */
+    .section {
+        padding: 60px 0; /* Padding ridotto su mobile */
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem; /* Titolo leggermente più piccolo per evitare a capo brutti */
     }
 }
