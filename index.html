@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio di un Software Engineer specializzato in sviluppo backend, frontend e architetture cloud.">
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="hf-DbAHwDrVKVdcc-toChyk1LuStw8a7UKJ3tC620SY" />
+    
+    <title>Dott. Amedeo Benedetti | Software Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Foglio di stile personalizzato -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">A.BENEDETTI</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <canvas id="canvas-bg"></canvas>
+    <div class="grid-bg"></div>
+    <div class="cursor"></div>
+
+    <!-- Header / Navigazione -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">A.Benedetti<span>_DEV</span></a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Chi Sono</a></li>
+                    <li><a href="#services">Servizi</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact" class="btn-primary">Contattami</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sezione Hero -->
+    <section id="home" class="hero">
+        <!-- Floating Code Elements -->
+        <div class="floating-code">import future</div>
+        <div class="floating-code">while(alive) { code() }</div>
+        <div class="floating-code">git push origin master</div>
+
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Costruisco soluzioni software <span class="highlight typing-text">performanti.</span></h1>
+                <p>Laureato in Ingegneria Informatica. Specializzato nello sviluppo di architetture software moderne, dal backend robusto a interfacce utente moderne e accattivanti.</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn-primary">Vedi Progetti <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn-secondary">Contattami</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/amedeobenedetti" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/amedeobenedetti" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/pic.jpg" alt="Foto Profilo Professionale">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Chi Sono -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title" data-text="Chi Sono">Chi Sono</h2>
+            <div class="about-content reveal">
+                <div class="about-text">
+                    <h3>Ingegneria & Codice</h3>
+                    <p>Sono laureato in ingegneria informatica e ora studente magistrale di Engineering in Computer Science and Artificial Intelligence presso l'università La Sapienza di Roma. Mi distinguo per la forte passione per la risoluzione di problemi complessi attraverso il codice.</p>
+                    <p>Non scrivo solo codice; progetto sistemi. Mi concentro sulla qualità del software, sulla manutenibilità e sulla performance.</p>
+                    
+                    <div class="skills-grid stagger-children">
+                        <div class="skill-item"><i class="fab fa-python"></i> Python & FastAPI</div>
+                        <div class="skill-item"><i class="fab fa-js"></i> JavaScript & React</div>
+                        <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
+                        <div class="skill-item"><i class="fas fa-database"></i> PostgreSQL</div>
+                        <div class="skill-item"><i class="fab fa-aws"></i> Cloud Computing</div>
+                        <div class="skill-item"><i class="fas fa-code-branch"></i> Git & CI/CD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Servizi -->
+    <section id="services" class="section services-bg">
+        <div class="container">
+            <h2 class="section-title" data-text="Servizi">Cosa Posso Fare</h2>
+            <div class="services-grid stagger-children">
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas fa-server"></i></div>
+                    <h3>Sviluppo Backend</h3>
+                    <p>Progettazione e sviluppo di API RESTful veloci e sicure utilizzando Python (FastAPI) e architetture scalabili.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Sviluppo Frontend</h3>
+                    <p>Creazione di interfacce utente moderne, reattive e accessibili con React, Vue.js o tecnologie standard.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas fa-robot"></i></div>
+                    <h3>AI & Automazione</h3>
+                    <p>Sviluppo di script per automatizzare task, integrazione di modelli AI e data scraping avanzato.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Deployment di applicazioni su cloud (AWS, DigitalOcean), containerizzazione con Docker e pipeline CI/CD.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Portfolio -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2 class="section-title" data-text="Progetti">Progetti Recenti</h2>
+            <div class="portfolio-grid">
+                <!-- Progetto 1 -->
+                <article class="project-card reveal-left">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chatbot AI Sanitario">
+                    </div>
+                    <div class="project-info">
+                        <h3>Chatbot AI Sanitario</h3>
+                        <p>Un assistente virtuale intelligente in grado di effettuare triage preliminare e rispondere a domande mediche frequenti.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>TensorFlow</span>
+                            <span>React</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- <a href="#" class="link-btn"><i class="fab fa-github"></i> Code</a> -->
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Progetto 2 -->
+                <article class="project-card reveal-right">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gestionale Carrozzeria">
+                    </div>
+                    <div class="project-info">
+                        <h3>Gestionale per carrozzerie & OCR Targa</h3>
+                        <p>Sistema gestionale completo con modulo OCR per il riconoscimento automatico delle targhe in ingresso.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- <a href="#" class="link-btn"><i class="fab fa-github"></i> Code</a> -->
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Contatti -->
+    <section id="contact" class="section contact-bg">
+        <div class="container">
+            <h2 class="section-title" data-text="Contatti">Lavoriamo Insieme</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal-left">
+                    <h3>Iniziamo...</h3>
+                    <p>Sono sempre interessato a nuove sfide e collaborazioni. Contattami per discutere di come posso aiutarti a realizzare la tua visione digitale.</p>
+                    <ul class="contact-details">
+                        <li><i class="fas fa-envelope"></i> amedeo.benedetti17@gmail.com</li>
+                        <li><i class="fab fa-linkedin"></i> linkedin.com/in/amedeobenedetti</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Roma, Italia (Remote Ready)</li>
+                    </ul>
+                </div>
+                <form class="contact-form reveal-right" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required placeholder="Il tuo nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="tua@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Messaggio</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Descrivi il tuo progetto..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary full-width">Invia Messaggio
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Amedeo Benedetti. All Rights Reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/amedeobenedetti"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/amedeobenedetti"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
