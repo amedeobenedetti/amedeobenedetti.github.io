@@ -2,242 +2,290 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Dott. Amedeo Benedetti | Software Engineer</title>
     <meta name="keywords" content="sviluppatore, python, ingegnere, sapienza, informatico">
     <meta name="description" content="Portfolio di un Software Engineer specializzato in sviluppo backend, frontend e architetture cloud.">
+    <meta name="author" content="Amedeo Benedetti">
+    <link rel="canonical" href="https://amedeobenedetti.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dott. Amedeo Benedetti | Software Engineer">
+    <meta property="og:description" content="Portfolio di un Software Engineer specializzato in sviluppo backend, frontend e architetture cloud.">
+    <meta property="og:url" content="https://amedeobenedetti.github.io/">
+    <meta property="og:image" content="https://amedeobenedetti.github.io/assets/images/pic-1064.jpg">
+    <meta property="og:locale" content="it_IT">
+
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231D1D1F'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='-apple-system,system-ui,sans-serif' font-size='26' font-weight='600' fill='white'%3EAB%3C/text%3E%3C/svg%3E">
+
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="hf-DbAHwDrVKVdcc-toChyk1LuStw8a7UKJ3tC620SY" />
-    
-    <!-- Google Analytics (Sostituisci G-XXXXXXXXXX con il tuo ID di Misurazione) -->
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSRJTSNYKB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-RSRJTSNYKB');
     </script>
 
-    <title>Dott. Amedeo Benedetti | Software Engineer</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome per le icone -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Foglio di stile personalizzato -->
+    <!-- Tema salvato: applicato prima del render per evitare il flash -->
+    <script>
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Loader -->
-    <div class="loader">
-        <div class="loader-content">
-            <div class="loader-logo">A.BENEDETTI</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
-            </div>
-        </div>
-    </div>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
 
-    <!-- Background Elements -->
-    <canvas id="canvas-bg"></canvas>
-    <div class="grid-bg"></div>
-    <div class="cursor"></div>
+    <!-- Icone (SVG inline, nessuna libreria esterna) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9.5 9h3.8v1.7h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.13V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21h-4z"/></symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M20.5 13.4A8.5 8.5 0 1 1 10.6 3.5a6.6 6.6 0 0 0 9.9 9.9z"/></symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g></symbol>
+        <symbol id="i-server" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="7" rx="2"/><rect x="3.5" y="13" width="17" height="7" rx="2"/><path d="M7.5 7.5h.01M7.5 16.5h.01M11 7.5h2M11 16.5h2"/></g></symbol>
+        <symbol id="i-frontend" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M2 20h20M10 8.5l-2 2 2 2M14 8.5l2 2-2 2"/></g></symbol>
+        <symbol id="i-ai" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M11 3.5l1.9 4.9 4.9 1.9-4.9 1.9L11 17.1l-1.9-4.9-4.9-1.9 4.9-1.9z"/><path d="M18.5 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></g></symbol>
+        <symbol id="i-cloud" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M7 18.5h10.5a4.25 4.25 0 0 0 .55-8.46A6 6 0 0 0 6.4 10.6 4 4 0 0 0 7 18.5z"/></symbol>
+    </svg>
 
     <!-- Header / Navigazione -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container nav-container">
-            <a href="#home" class="logo">A.Benedetti<span>_DEV</span></a>
-            <nav class="navbar">
+            <a href="#home" class="logo" aria-label="Amedeo Benedetti, torna all'inizio">Amedeo Benedetti</a>
+
+            <nav class="navbar" id="navbar" aria-label="Navigazione principale">
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">Chi Sono</a></li>
                     <li><a href="#services">Servizi</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact" class="btn-primary">Contattami</a></li>
+                    <li class="nav-cta-item"><a href="#contact" class="btn btn-primary btn-sm">Contattami</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
             </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Cambia tema chiaro/scuro">
+                    <svg class="icon-moon" width="18" height="18" aria-hidden="true"><use href="#i-moon"/></svg>
+                    <svg class="icon-sun" width="18" height="18" aria-hidden="true"><use href="#i-sun"/></svg>
+                </button>
+                <button class="icon-btn hamburger" id="hamburger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="navbar">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Sezione Hero -->
-    <section id="home" class="hero">
-        <!-- Floating Code Elements -->
-        <div class="floating-code">import future</div>
-        <div class="floating-code">while(alive) { code() }</div>
-        <div class="floating-code">git push origin master</div>
+    <main id="main">
 
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Costruisco soluzioni software <span class="highlight typing-text">performanti.</span></h1>
-                <p>Laureato in Ingegneria Informatica. Specializzato nello sviluppo di architetture software moderne, dal backend robusto a interfacce utente moderne e accattivanti.</p>
+        <!-- Sezione Hero -->
+        <section id="home" class="hero">
+            <div class="container hero-text">
+                <p class="hero-kicker">Dott. Amedeo Benedetti · Software Engineer</p>
+                <h1 class="display">
+                    Costruisco soluzioni software
+                    <span class="rotator" id="rotator">performanti.</span>
+                </h1>
+                <p class="hero-lead">Laureato in Ingegneria Informatica. Specializzato nello sviluppo di architetture software moderne, dal backend robusto a interfacce utente moderne e accattivanti.</p>
                 <div class="hero-buttons">
-                    <a href="#portfolio" class="btn-primary">Vedi Progetti <i class="fas fa-arrow-right"></i></a>
-                    <a href="#contact" class="btn-secondary">Contattami</a>
+                    <a href="#portfolio" class="btn btn-primary">Vedi Progetti</a>
+                    <a href="#contact" class="text-link">Contattami <span aria-hidden="true">›</span></a>
                 </div>
+            </div>
+
+            <div class="container">
+                <figure class="hero-image">
+                    <img src="assets/images/pic-1064.jpg"
+                         srcset="assets/images/pic-665.jpg 665w, assets/images/pic-1064.jpg 1064w"
+                         sizes="(max-width: 1180px) 92vw, 1100px"
+                         width="1064" height="1600"
+                         fetchpriority="high"
+                         alt="Foto Profilo Professionale di Amedeo Benedetti">
+                </figure>
+
+                <dl class="hero-meta">
+                    <div><dt>Base</dt><dd>Monterotondo, Roma</dd></div>
+                    <div><dt>Studio</dt><dd>MSc Computer Science &amp; AI, Sapienza</dd></div>
+                    <div><dt>Disponibilità</dt><dd>Remote ready</dd></div>
+                </dl>
+
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/amedeobenedetti" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/amedeobenedetti" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/amedeobenedetti" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+                    <a href="https://github.com/amedeobenedetti" target="_blank" rel="noopener" aria-label="GitHub"><svg width="18" height="18" aria-hidden="true"><use href="#i-github"/></svg></a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="assets/images/pic.jpg" alt="Foto Profilo Professionale">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sezione Chi Sono -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="section-title" data-text="Chi Sono">Chi Sono</h2>
-            <div class="about-content reveal">
-                <div class="about-text">
-                    <h3>Ingegneria & Codice</h3>
-                    <p>Sono laureato in ingegneria informatica e ora studente magistrale di Engineering in Computer Science and Artificial Intelligence presso l'università La Sapienza di Roma. Mi distinguo per la forte passione per la risoluzione di problemi complessi attraverso il codice.</p>
-                    <p>Non scrivo solo codice; progetto sistemi. Mi concentro sulla qualità del software, sulla manutenibilità e sulla performance.</p>
-                    
-                    <div class="skills-grid stagger-children">
-                        <div class="skill-item"><i class="fab fa-python"></i> Python & FastAPI</div>
-                        <div class="skill-item"><i class="fab fa-js"></i> JavaScript & React</div>
-                        <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
-                        <div class="skill-item"><i class="fas fa-database"></i> PostgreSQL</div>
-                        <div class="skill-item"><i class="fab fa-aws"></i> Cloud Computing</div>
-                        <div class="skill-item"><i class="fas fa-code-branch"></i> Git & CI/CD</div>
-                    </div>
+        <!-- Sezione Chi Sono -->
+        <section id="about" class="section">
+            <div class="container narrow">
+                <h2 class="section-label">Chi Sono</h2>
+                <p class="statement reveal"><strong>Ingegneria &amp; Codice.</strong> Sono laureato in ingegneria informatica e ora studente magistrale di Engineering in Computer Science and Artificial Intelligence presso l'università La Sapienza di Roma. <strong>Mi distinguo per la forte passione per la risoluzione di problemi complessi attraverso il codice.</strong></p>
+                <p class="statement statement-2 reveal">Non scrivo solo codice; progetto sistemi. <strong>Mi concentro sulla qualità del software, sulla manutenibilità e sulla performance.</strong></p>
+
+                <ul class="skills-list reveal" aria-label="Competenze">
+                    <li>Python &amp; FastAPI</li>
+                    <li>JavaScript &amp; React</li>
+                    <li>Docker</li>
+                    <li>PostgreSQL</li>
+                    <li>Cloud Computing</li>
+                    <li>Git &amp; CI/CD</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sezione Servizi -->
+        <section id="services" class="section section-alt">
+            <div class="container">
+                <header class="section-head">
+                    <h2 class="h2">Cosa Posso Fare.</h2>
+                </header>
+
+                <div class="tiles">
+                    <article class="tile reveal">
+                        <svg class="tile-icon" width="32" height="32" aria-hidden="true"><use href="#i-server"/></svg>
+                        <h3>Sviluppo Backend</h3>
+                        <p>Progettazione e sviluppo di API RESTful veloci e sicure utilizzando Python (FastAPI) e architetture scalabili.</p>
+                    </article>
+                    <article class="tile reveal">
+                        <svg class="tile-icon" width="32" height="32" aria-hidden="true"><use href="#i-frontend"/></svg>
+                        <h3>Sviluppo Frontend</h3>
+                        <p>Creazione di interfacce utente moderne, reattive e accessibili con React, Vue.js o tecnologie standard.</p>
+                    </article>
+                    <article class="tile reveal">
+                        <svg class="tile-icon" width="32" height="32" aria-hidden="true"><use href="#i-ai"/></svg>
+                        <h3>AI &amp; Automazione</h3>
+                        <p>Sviluppo di script per automatizzare task, integrazione di modelli AI e data scraping avanzato.</p>
+                    </article>
+                    <article class="tile reveal">
+                        <svg class="tile-icon" width="32" height="32" aria-hidden="true"><use href="#i-cloud"/></svg>
+                        <h3>Cloud &amp; DevOps</h3>
+                        <p>Deployment di applicazioni su cloud (AWS, DigitalOcean), containerizzazione con Docker e pipeline CI/CD.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sezione Servizi -->
-    <section id="services" class="section services-bg">
-        <div class="container">
-            <h2 class="section-title" data-text="Servizi">Cosa Posso Fare</h2>
-            <div class="services-grid stagger-children">
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-server"></i></div>
-                    <h3>Sviluppo Backend</h3>
-                    <p>Progettazione e sviluppo di API RESTful veloci e sicure utilizzando Python (FastAPI) e architetture scalabili.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Sviluppo Frontend</h3>
-                    <p>Creazione di interfacce utente moderne, reattive e accessibili con React, Vue.js o tecnologie standard.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-robot"></i></div>
-                    <h3>AI & Automazione</h3>
-                    <p>Sviluppo di script per automatizzare task, integrazione di modelli AI e data scraping avanzato.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud & DevOps</h3>
-                    <p>Deployment di applicazioni su cloud (AWS, DigitalOcean), containerizzazione con Docker e pipeline CI/CD.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Sezione Portfolio -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <h2 class="h2">Progetti Recenti.</h2>
+                </header>
 
-    <!-- Sezione Portfolio -->
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2 class="section-title" data-text="Progetti">Progetti Recenti</h2>
-            <div class="portfolio-grid">
-                <!-- Progetto 1 -->
-                <article class="project-card reveal-left">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chatbot AI Sanitario">
-                    </div>
-                    <div class="project-info">
-                        <h3>Chatbot AI Sanitario</h3>
-                        <p>Un assistente virtuale intelligente in grado di effettuare triage preliminare e rispondere a domande mediche frequenti.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>NLP</span>
-                            <span>TensorFlow</span>
-                            <span>React</span>
+                <div class="projects">
+                    <!-- Progetto 1 -->
+                    <article class="project reveal">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Chatbot AI Sanitario" loading="lazy" width="1200" height="750">
                         </div>
-                        <div class="project-links">
-                            <!-- <a href="#" class="link-btn"><i class="fab fa-github"></i> Code</a> -->
+                        <div class="project-info">
+                            <p class="project-stack">Python · NLP · TensorFlow · React</p>
+                            <h3>Chatbot AI Sanitario</h3>
+                            <p>Un assistente virtuale intelligente in grado di effettuare triage preliminare e rispondere a domande mediche frequenti.</p>
+                            <div class="project-links">
+                                <!-- <a href="#" class="text-link">Codice su GitHub <span aria-hidden="true">›</span></a> -->
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Progetto 2 -->
-                <article class="project-card reveal-right">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gestionale Carrozzeria">
-                    </div>
-                    <div class="project-info">
-                        <h3>Gestionale per carrozzerie & OCR Targa</h3>
-                        <p>Sistema gestionale completo con modulo OCR per il riconoscimento automatico delle targhe in ingresso.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>OpenCV</span>
-                            <span>PostgreSQL</span>
+                    <!-- Progetto 2 -->
+                    <article class="project reveal">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Gestionale Carrozzeria" loading="lazy" width="1200" height="750">
                         </div>
-                        <div class="project-links">
-                            <!-- <a href="#" class="link-btn"><i class="fab fa-github"></i> Code</a> -->
+                        <div class="project-info">
+                            <p class="project-stack">Python · OpenCV · PostgreSQL</p>
+                            <h3>Gestionale per carrozzerie &amp; OCR Targa</h3>
+                            <p>Sistema gestionale completo con modulo OCR per il riconoscimento automatico delle targhe in ingresso.</p>
+                            <div class="project-links">
+                                <!-- <a href="#" class="text-link">Codice su GitHub <span aria-hidden="true">›</span></a> -->
+                            </div>
                         </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sezione Contatti -->
-    <section id="contact" class="section contact-bg">
-        <div class="container">
-            <h2 class="section-title" data-text="Contatti">Lavoriamo Insieme</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info reveal-left">
-                    <h3>Iniziamo...</h3>
-                    <p>Sono sempre interessato a nuove sfide e collaborazioni. Contattami per discutere di come posso aiutarti a realizzare la tua visione digitale.</p>
-                    <ul class="contact-details">
-                        <li><i class="fas fa-envelope"></i> amedeo.benedetti17@gmail.com</li>
-                        <li><i class="fab fa-linkedin"></i> linkedin.com/in/amedeobenedetti</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Monterotondo, Roma, Italia (Remote Ready)</li>
-                    </ul>
+                    </article>
                 </div>
-                <form class="contact-form reveal-right" id="contactForm">
+            </div>
+        </section>
+
+        <!-- Sezione Contatti -->
+        <section id="contact" class="section section-alt">
+            <div class="container contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="h2">Lavoriamo Insieme.</h2>
+                    <p class="contact-lead"><strong>Iniziamo...</strong> Sono sempre interessato a nuove sfide e collaborazioni. Contattami per discutere di come posso aiutarti a realizzare la tua visione digitale.</p>
+
+                    <dl class="contact-details">
+                        <div>
+                            <dt>Email</dt>
+                            <dd>
+                                <a href="mailto:amedeo.benedetti17@gmail.com" id="email-address">amedeo.benedetti17@gmail.com</a>
+                                <button type="button" class="copy-btn" id="copy-email">Copia</button>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>LinkedIn</dt>
+                            <dd><a href="https://linkedin.com/in/amedeobenedetti" target="_blank" rel="noopener">linkedin.com/in/amedeobenedetti</a></dd>
+                        </div>
+                        <div>
+                            <dt>Sede</dt>
+                            <dd>Monterotondo, Roma, Italia (Remote Ready)</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mblnzrbr" method="POST" novalidate>
                     <div class="form-group">
                         <label for="name">Nome</label>
-                        <input type="text" id="name" name="name" required placeholder="Il tuo nome">
+                        <input type="text" id="name" name="name" required autocomplete="name" placeholder="Il tuo nome">
+                        <p class="field-error" id="name-error"></p>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="tua@email.com">
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="tua@email.com">
+                        <p class="field-error" id="email-error"></p>
                     </div>
                     <div class="form-group">
                         <label for="message">Messaggio</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Descrivi il tuo progetto..."></textarea>
+                        <textarea id="message" name="message" rows="6" required placeholder="Descrivi il tuo progetto..."></textarea>
+                        <p class="field-error" id="message-error"></p>
                     </div>
-                    <button type="submit" class="btn-primary full-width">Invia Messaggio
+
+                    <!-- Anti-spam Formspree: campo nascosto, lasciare vuoto -->
+                    <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <input type="hidden" name="_subject" value="Nuovo messaggio dal sito amedeobenedetti.github.io">
+
+                    <button type="submit" class="btn btn-primary btn-lg full-width" id="submit-btn">
+                        <span class="spinner" aria-hidden="true"></span>
+                        <span class="btn-label">Invia Messaggio</span>
+                    </button>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-inner">
             <p>&copy; 2026 Amedeo Benedetti. All Rights Reserved.</p>
             <div class="footer-socials">
-                <a href="https://github.com/amedeobenedetti"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/amedeobenedetti"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/amedeobenedetti" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com/in/amedeobenedetti" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </div>
     </footer>
 
-    <!-- Script JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
