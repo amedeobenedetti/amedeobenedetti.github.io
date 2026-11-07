@@ -365,14 +365,16 @@ body::before {
 }
 
 .hero-image {
-    margin: clamp(56px, 7vw, 88px) 0 0;
+    width: 100%;
+    max-width: 340px;
+    margin: clamp(48px, 6vw, 72px) auto 0;
 }
 .hero-image img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
-    object-position: 58% 33%;
+    object-position: 50% 30%;
     border-radius: var(--radius-tile);
     background: var(--bg-alt);
 }
@@ -381,13 +383,15 @@ body::before {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
-    margin-top: 40px;
+    max-width: 760px;
+    margin: 40px auto 0;
+    text-align: center;
 }
 .hero-meta > div { display: flex; flex-direction: column; gap: 2px; }
 .hero-meta dt { font-size: 0.8125rem; letter-spacing: -0.01em; color: var(--faint); }
 .hero-meta dd { font-size: 1.0625rem; font-weight: 600; }
 
-.social-links { display: flex; gap: 8px; margin-top: 32px; }
+.social-links { display: flex; justify-content: center; gap: 8px; margin-top: 32px; }
 .social-links a {
     display: inline-grid;
     place-items: center;
@@ -738,7 +742,7 @@ body::before {
     .nav-cta-item { margin: 16px 0 0; }
     .nav-cta-item .btn { width: 100%; min-height: 48px; font-size: 1.0625rem; }
 
-    .hero-image img { aspect-ratio: 4 / 5; object-position: 58% 25%; }
+    .hero-image { max-width: 280px; }
     .hero-meta { grid-template-columns: minmax(0, 1fr); gap: 16px; }
 }
 
